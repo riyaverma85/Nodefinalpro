@@ -37,6 +37,13 @@ const Header=()=>{
     for(let x in input){
       formData.append(x.input[x]);
     }
+    try {
+      const res=await axios.post(api,formData,{
+        headers:{"Content-Type":"multipart/form-data"}
+      })
+    } catch (error) {
+      
+    }
    }
    return(
         <>
