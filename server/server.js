@@ -1,2 +1,8 @@
 
-const express=requi
+const express=require("express");
+const cors=require("cors");
+
+
+const app=express();
+const Port=process.e
+app.listen
