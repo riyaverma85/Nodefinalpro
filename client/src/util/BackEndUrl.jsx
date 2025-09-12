@@ -1,7 +1,7 @@
 
 
 
-const BackEndURL="http://localhost:8000";
+const BackendURL="http://localhost:8000";
 
 
-export default BackEndURL;
+export default BackendURL;

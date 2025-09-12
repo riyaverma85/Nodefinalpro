@@ -1,13 +1,14 @@
 import docimg from "../images/doctor.jpeg";
-import mainheading from "../images/mainheading.png";
+import mainheading from "../images/logo.png";
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-
+import BackendURL from "../util/BackEndUrl";
 
 
 const Header=()=>{
+  //====================================================REGITRATION MODAL===========================================================================
     const [input, setInput] = useState({});
     const [image, setImage] = useState("");
    const [show, setShow] = useState(false);
@@ -26,10 +27,18 @@ const Header=()=>{
        setInput(values=>({...values, [name]:value}));
        console.log(input);
    }
+   const handleSubmit=async()=>{
+    e.preventDefault();
+    let api=`{BackendURL}/doctor/registration`;
+    if(!image) return alert("Please upload doctor image");
+    const formData=new FormData();
+    formData.append("file",image)
 
-  
-
-    return(
+    for(let x in input){
+      formData.append(x.input[x]);
+    }
+   }
+   return(
         <>
             <div id="header">
                <div id="logo">
@@ -101,10 +110,7 @@ const Header=()=>{
         Submit
       </Button>
     </Form>
-
-
-
-        </Modal.Body>
+    </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
