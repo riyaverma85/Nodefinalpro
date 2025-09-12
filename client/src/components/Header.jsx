@@ -29,7 +29,7 @@ const Header=()=>{
    }
    const handleSubmit=async()=>{
     e.preventDefault();
-    let api=`{BackendURL}/doctor/registration`;
+    let api=`${BackendURL}/doctor/registration`;
     if(!image) return alert("Please upload doctor image");
     const formData=new FormData();
     formData.append("file",image)
@@ -41,7 +41,11 @@ const Header=()=>{
       const res=await axios.post(api,formData,{
         headers:{"Content-Type":"multipart/form-data"}
       })
+      console.log(res)
+      setShow(false);
+      toast.info("Registration Successfully")
     } catch (error) {
+      console.log(error)
       
     }
    }
@@ -113,7 +117,7 @@ const Header=()=>{
         <Form.Label>Enter Password</Form.Label>
         <Form.Control type="password" name="password" onChange={handleInput} />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
       </Button>
     </Form>
