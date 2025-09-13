@@ -5,8 +5,9 @@ require("dotenv").config();
 const mongoose=require("mongoose");
 const doctorRoute=require("./routes/doctorRoute");
 const bodyparser=require("body-parser");
+const app= express();
 app.use(cors())
-const app=express();
+
 
 //Database connection
 mongoose.connect(process.env.DBCON).then(()=>{

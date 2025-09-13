@@ -17,7 +17,7 @@ const storage=new CloudinaryStorage({
         folder:"mern_uploads",   //folder name on cloudinary
         allowed_formats:["jpg","png","jpeg","webp","pdf"]    //allowed file  types
     },
-})
+});
 
 const upload=multer({storage:storage});
 module.exports={
