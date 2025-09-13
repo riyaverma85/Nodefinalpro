@@ -65,7 +65,8 @@ const Header=()=>{
     try {
       const res=await axios.post(api,{email:emaillog,password:passwordlog})
       console.log(res.data);
-
+      toast.success("Login Successfully")
+      setShowlog(false)
     } catch (error) {
       console.log(error)
     }
