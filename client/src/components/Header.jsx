@@ -1,11 +1,13 @@
-import docimg from "../images/doctor.jpeg";
+//import docimg from "../images/doctor.jpeg";
 import mainheading from "../images/logo.png";
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-import BackendURL from "../util/BackEndUrl";
-
+import BackendURL from "../util/BackendUrl";
+import {ToastContainer,toast} from "react-toastify"
+import axios from "axios";
+import "react-toastify/dist/ReactToastify.css"
 
 const Header=()=>{
   //====================================================REGITRATION MODAL===========================================================================
@@ -14,6 +16,13 @@ const Header=()=>{
    const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  //====================================================LOGIN MODAL===========================================================================
+    
+    const [showlog, setShowlog] = useState(false);
+    const handleCloselog = () => setShowlog(false);
+    const handleShowlog = () => setShowlog(true);
+    const [emaillog,setEmaillog]=useState("");
+    const [passwordlog,setPasswordlog]=useState("");
 
    
   const handleImage=(e)=>{
@@ -27,7 +36,7 @@ const Header=()=>{
        setInput(values=>({...values, [name]:value}));
        console.log(input);
    }
-   const handleSubmit=async()=>{
+   const handleSubmit=async(e)=>{
     e.preventDefault();
     let api=`${BackendURL}/doctor/registration`;
     if(!image) return alert("Please upload doctor image");
@@ -35,7 +44,7 @@ const Header=()=>{
     formData.append("file",image)
 
     for(let x in input){
-      formData.append(x.input[x]);
+      formData.append(x,input[x]);
     }
     try {
       const res=await axios.post(api,formData,{
@@ -49,36 +58,48 @@ const Header=()=>{
       
     }
    }
+
+   const loginSubmit=async(e)=>{
+    e.preventDefault();
+    let api=`${BackendURL}/doctor/login`;
+    try {
+      const res=await axios.post(api,{email:emaillog,password:passwordlog})
+      console.log(res.data);
+
+    } catch (error) {
+      console.log(error)
+    }
+   }
    return(
         <>
             <div id="header">
-               <div id="logo">
+               {/* <div id="logo">
                   <img src={docimg}  className="logoimg"/>
-               </div>
+               </div> */}
                <div id="heading">
                      <img src={mainheading} />
                </div>
                <div id="rightmenu">
-                <Button variant="primary">Login</Button>    <Button variant="primary" onClick={handleShow}>Registration</Button>
+                <Button variant="primary" onClick={handleShowlog}>Login</Button>    <Button variant="primary" onClick={handleShow}>Registration</Button>
                </div>
      
             </div>
 
 
          
-
-      <Modal show={show} onHide={handleClose}>
+{/* //=============================================================================REGITRATION MODEL====================================================================================*/}
+      <Modal show={show} onHide={handleClose}> 
         <Modal.Header closeButton>
           <Modal.Title>Doctor Registration Form</Modal.Title>
         </Modal.Header>
         <Modal.Body>
 
           <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3" >
         <Form.Label>Enter Doctor Name</Form.Label>
-        <Form.Control type="text" name="name" onChange={handleInput} />
+        <Form.Control type="text" name="doctorname" onChange={handleInput} />
       </Form.Group>
-       <Form.Group className="mb-3" controlId="formBasicEmail">
+       <Form.Group className="mb-3" >
         <Form.Label>Select Specialization</Form.Label>
        <Form.Select aria-label="Default select example" name="speciality" onChange={handleInput}>
       <option>Open this select menu</option>
@@ -93,27 +114,27 @@ const Header=()=>{
             <option value="Surgeon">Surgeon</option>
     </Form.Select>
       </Form.Group>
-       <Form.Group className="mb-3" controlId="formBasicEmail">
+       <Form.Group className="mb-3" >
         <Form.Label>Enter City</Form.Label>
         <Form.Control type="text" name="city"  onChange={handleInput}/>
       </Form.Group>
-       <Form.Group className="mb-3" controlId="formBasicEmail">
+       <Form.Group className="mb-3" >
         <Form.Label>Enter Clinic Address</Form.Label>
         <Form.Control type="text" name="address" onChange={handleInput} />
       </Form.Group>
-       <Form.Group className="mb-3" controlId="formBasicEmail">
+       <Form.Group className="mb-3" >
         <Form.Label>Upload Doctor Image</Form.Label>
         <Form.Control type="file" name="file" onChange={handleImage}  />
       </Form.Group>
-       <Form.Group className="mb-3" controlId="formBasicEmail">
+       <Form.Group className="mb-3" >
         <Form.Label>Enter Contact Number</Form.Label>
         <Form.Control type="text" name="contact" onChange={handleInput} />
       </Form.Group>
-       <Form.Group className="mb-3" controlId="formBasicEmail">
+       <Form.Group className="mb-3" >
         <Form.Label>Enter Email</Form.Label>
         <Form.Control type="text"  name="email" onChange={handleInput}/>
       </Form.Group>
-       <Form.Group className="mb-3" controlId="formBasicEmail">
+       <Form.Group className="mb-3" >
         <Form.Label>Enter Password</Form.Label>
         <Form.Control type="password" name="password" onChange={handleInput} />
       </Form.Group>
@@ -129,6 +150,38 @@ const Header=()=>{
         </Modal.Footer>
       </Modal>
 
+{/* //=============================================================================LOGIN MODEL====================================================================================*/}
+      <Modal show={showlog} onHide={handleCloselog}> 
+        <Modal.Header closeButton>
+          <Modal.Title>Doctor Login Form</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+
+          <Form>
+      <Form.Group className="mb-3" >
+        <Form.Label>Enter Email</Form.Label>
+        <Form.Control type="text"  name="emaillog" value={emaillog} onChange={(e)=>{setEmaillog(e.target.value)}}/>
+      </Form.Group>
+       <Form.Group className="mb-3" >
+        <Form.Label>Enter Password</Form.Label>
+        <Form.Control type="password" name="passwordlog" value={passwordlog} onChange={(e)=>{setPasswordlog(e.target.value)}} />
+      </Form.Group>
+      <Button variant="primary" type="submit" onClick={loginSubmit}>
+        LOGIN
+      </Button>
+    </Form>
+    </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloselog}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
+
+
+      <ToastContainer/>
         </>
     )
 }
