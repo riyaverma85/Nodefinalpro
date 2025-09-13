@@ -8,7 +8,7 @@ import BackendURL from "../util/BackendUrl";
 import {ToastContainer,toast} from "react-toastify"
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css"
-
+import {useNavigate} from "react-router-dom"
 const Header=()=>{
   //====================================================REGITRATION MODAL===========================================================================
     const [input, setInput] = useState({});
@@ -23,7 +23,7 @@ const Header=()=>{
     const handleShowlog = () => setShowlog(true);
     const [emaillog,setEmaillog]=useState("");
     const [passwordlog,setPasswordlog]=useState("");
-
+   const navigate=useNavigate();
    
   const handleImage=(e)=>{
        setImage(e.target.files[0]);
@@ -67,6 +67,7 @@ const Header=()=>{
       console.log(res.data);
       toast.success("Login Successfully")
       setShowlog(false)
+      navigate("/doctorhome")
     } catch (error) {
       console.log(error)
     }
