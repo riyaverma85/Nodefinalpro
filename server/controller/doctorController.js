@@ -33,8 +33,9 @@ const doctorLogin=async(req,res)=>{
         {
             res.status(401).send({msg:"Inavalid Password"})
         }
+        res.status(200).send({msg:"Login Successfull",doctor})
      } catch (error) {
-        
+        console.log(error)
      }
 }
 module.exports={
