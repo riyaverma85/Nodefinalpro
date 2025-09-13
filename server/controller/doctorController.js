@@ -38,7 +38,17 @@ const doctorLogin=async(req,res)=>{
         console.log(error)
      }
 }
+const getDoctor=async(req,res)=>{
+    try {
+        const doctor=await doctorModel.find();
+        res.status(200).json(doctor)
+    } catch (error) {
+        console.log(error)
+    }
+    console.log("okkk")
+}
 module.exports={
     regisTration,
-    doctorLogin
+    doctorLogin,
+    getDoctor
 }
