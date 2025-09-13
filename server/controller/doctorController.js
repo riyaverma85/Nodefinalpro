@@ -22,6 +22,22 @@ const regisTration=async(req,res)=>{
          res.status(500).json({success:false,message: error.message})
        }
 }
+const doctorLogin=async(req,res)=>{
+     const{email,password}=req.body;
+     try {
+        const doctor=await doctorModel.findOne({email:email});
+        if(!doctor){
+            res.status(401).json({msg:"Email is not registerd"})
+        }
+        if(doctor.password!=password)
+        {
+            res.status(401).send({msg:"Inavalid Password"})
+        }
+     } catch (error) {
+        
+     }
+}
 module.exports={
-    regisTration
+    regisTration,
+    doctorLogin
 }
