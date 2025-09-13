@@ -9,8 +9,42 @@ import doc1 from "../images/doc1.jpeg";
 import doc2 from "../images/doc2.jpeg";
 import doc3 from "../images/doc3.jpeg";
 import doc4 from "../images/doc4.jpeg";
+import { useEffect, useState } from 'react';
+import BackendURL from '../util/BackendUrl';
+import axios from 'axios';
 
 const Home=()=>{
+  const[mydata,setMydata]=useState([]);
+  const getData=async()=>{
+    let api=`${BackendURL}/doctor/getdoctor`;
+    try {
+      const res=await axios.get(api);
+      console.log(res.data);
+      setMydata(res.data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(()=>{
+    getData();
+  })
+  const list=mydata.map((item)=>{
+    return(
+      <>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={item.image} height="270" />
+      <Card.Body>
+        <Card.Title>DR:{key.doctorname}</Card.Title>
+        <Card.Text>
+          Speciality:{item.speciality}<br/>
+          City:{item.city}
+        </Card.Text>
+        <Button variant="primary">Get Appointment</Button>
+      </Card.Body>
+    </Card>
+      </>
+    )
+  })
     return(
         <>
            <Carousel>
@@ -43,162 +77,7 @@ const Home=()=>{
       <h1> Top Doctors </h1>
 
       <div id="docList">
-         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc1} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-      <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc2} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc3} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc4} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc3} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc2} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc1} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc4} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc1} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc3} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc2} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
-  <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={doc4} height="270" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-
-
+        {list}
       </div>
         </>
     )
