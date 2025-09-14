@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-// import Table from 'react-bootstrap/Table';
+ import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
 import BackendURL from '../util/BackendUrl';
@@ -14,20 +14,20 @@ const SearchCity=()=>{
         console.log(res.data);
         setMydata(res.data);
     }
-     const City=mydata.map((key)=>{
-            return(
-                    <>
-                       <div>
-                            
-                            <h3> <img src={key.image} alt="web" id='searchimg'/></h3>
-                            <h2>Name:{key.doctorname}</h2>
-                            <h3>City:{key.city}</h3>
-                            <h2>Speciality:{key.speciality}</h2>
-                            <h3>Email:{key.email}</h3>
+     const City= mydata.map((key,index)=>{
+                        return(
+                            <>
+                            <tr>
+                                <td>{index+1}</td>
+                                <td> <img src={key.image} alt="web" id='searchimg'/></td>
+                                <td>{key.doctorname}</td>
+                                <td>{key.city}</td>
+                                <td>{key.speciality}</td>
+                                <td>{key.email}</td>
                                 
-                       </div>
-                    </>
-                )
+                            </tr>
+                            </>
+                        )
          })
      return(
         <>
@@ -40,11 +40,23 @@ const SearchCity=()=>{
      <Button variant="primary" type="submit" onClick={handleSubmit}>
              Search
            </Button>
-         </Form>
+      </Form>
+      <Table className='tbl'>
+               <thead>
+                 <tr>
+                    <th>NO</th>
+                    <th>IMAGE</th>
+                   <th>Name</th>
+                   <th>CITY</th>
+                   <th>SPECIALITY</th>
+                   <th>EMAIL</th>
+                 </tr>
+               </thead>
+               <tbody>
+                {City}
+               </tbody>
+        </Table>
          
-         <div id="searchtable">
-          {City}
-         </div>
         </>
     )
 }

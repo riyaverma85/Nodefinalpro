@@ -34,6 +34,7 @@
     padding: 2rem;
     background-color: #F8F9FA;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
 }
 .tbl{
     margin-top: 30px;
@@ -46,11 +47,11 @@
 }
 /*=======================================================Search City PAGE================================================================================*/
 #searchtable{
+    margin-top: 40px;
     width: 400px;
     height: 350px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: center;
     padding: 2rem;
     
 }
+
