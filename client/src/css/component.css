@@ -42,6 +42,26 @@
   background: #03045e !important;
   transform: scale(1.05);
 }
+/*================================================================NAVBAR============================================================================*/
+#topmenu{
+    /* background-color: #103568; */
+    background: #0077b6;
+    color: aliceblue;
+}
+#head{
+    color: aliceblue;
+    font-family: cursive;
+    font-weight: bolder;
+    font-style: italic;
+    color: black;
+}
+.me-auto{
+    margin-left: 30%;
+}
+.pages{
+    color: aliceblue;
+    font-weight: bold;
+}
 
 /* ============================================ Modal Styles========================================================= ===== */
 .modal-content {
@@ -58,6 +78,7 @@
 
 .modal-title {
   font-weight: bold;
+  
 }
 
 .modal-footer button {
@@ -247,23 +268,4 @@ form button:hover {
   .newsletter button {
     border-radius: 5px;
   }
-}
-/*================================================================NAVBAR============================================================================*/
-#topmenu{
-    /* background-color: #103568; */
-    background: #0077b6;
-    color: aliceblue;
-}
-#head{
-    color: aliceblue;
-    font-family: cursive;
-    font-weight: bolder;
-    font-style: italic;
-}
-.me-auto{
-    margin-left: 30%;
-}
-.pages{
-    color: aliceblue;
-    font-weight: bold;
 }

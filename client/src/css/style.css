@@ -1,6 +1,6 @@
 
 
-h1 
+.h33
 {
     text-align: center;
     color: rgb(12, 12, 12);
@@ -24,4 +24,23 @@ h1
     width: 90%;
     margin: auto;
 }
-
+/*=======================================================Search PAGE================================================================================*/
+#form2{
+    margin-top: 20px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 32%;
+    padding: 2rem;
+    background-color: #F8F9FA;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.tbl{
+    margin-top: 30px;
+    text-align: center;
+}
+#searchimg{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}

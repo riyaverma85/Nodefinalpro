@@ -1,11 +1,10 @@
+
 import Carousel from 'react-bootstrap/Carousel';
 import ban1 from "../images/banner2.avif";
 import ban2 from "../images/image1.avif";
 import ban3 from "../images/syrup.avif";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-
 import { useEffect, useState } from 'react';
 import BackendURL from '../util/BackEndUrl';
 import axios from 'axios';
@@ -71,7 +70,7 @@ const Home=()=>{
       </Carousel.Item>
     </Carousel>
 
-      <h1> Top Doctors </h1>
+      <h3 className='h33'> Top Doctors </h3>
 
       <div id="docList">
         {list}
