@@ -8,10 +8,13 @@ const Layout=()=>{
         <>
 
        <Container fluid>
+        <div className="sticky-top">
            <Header/>
            <TopMenu/>
-           
+        </div>
+           <div className="outletdiv">
            <Outlet/>
+           </div>
 
            <Footer/>
 

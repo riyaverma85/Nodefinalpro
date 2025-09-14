@@ -1,16 +1,13 @@
 import Carousel from 'react-bootstrap/Carousel';
-import ban1 from "../images/ban1.jpeg";
-import ban2 from "../images/ban2.jpg";
-import ban3 from "../images/ban3.webp";
+import ban1 from "../images/banner2.avif";
+import ban2 from "../images/image1.avif";
+import ban3 from "../images/syrup.avif";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import doc1 from "../images/doc1.jpeg";
-import doc2 from "../images/doc2.jpeg";
-import doc3 from "../images/doc3.jpeg";
-import doc4 from "../images/doc4.jpeg";
+
 import { useEffect, useState } from 'react';
-import BackendURL from '../util/BackendUrl';
+import BackendURL from '../util/BackEndUrl';
 import axios from 'axios';
 
 const Home=()=>{
@@ -27,14 +24,14 @@ const Home=()=>{
   }
   useEffect(()=>{
     getData();
-  })
+  },[])
   const list=mydata.map((item)=>{
     return(
       <>
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={item.image} height="270" />
       <Card.Body>
-        <Card.Title>DR:{key.doctorname}</Card.Title>
+        <Card.Title><span className='span'>Dr.:{item.doctorname}</span> </Card.Title>
         <Card.Text>
           Speciality:{item.speciality}<br/>
           City:{item.city}
@@ -49,27 +46,27 @@ const Home=()=>{
         <>
            <Carousel>
       <Carousel.Item>
-         <img src={ban1}  width="100%" height="300"  / >
+         <img src={ban1}  width="100%" height="400"  / >
 
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          {/* <h3>First slide label</h3> */}
+          {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-         <img src={ban2}  width="100%" height="300"  / >
+         <img src={ban2}  width="100%" height="400"  / >
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          {/* <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-       <img src={ban3}  width="100%" height="300"  / >
+       <img src={ban3}  width="100%" height="400"  / >
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          {/* <h3>Third slide label</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          </p> */}
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

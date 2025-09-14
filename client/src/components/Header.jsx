@@ -66,7 +66,6 @@ const Header=()=>{
       const res=await axios.post(api,{email:emaillog,password:passwordlog})
       console.log(res.data);
       toast.success("Login Successfully")
-      setShowlog(false)
       navigate("/doctorhome")
     } catch (error) {
       console.log(error)
@@ -76,8 +75,9 @@ const Header=()=>{
         <>
             <div id="header">
                {/* <div id="logo">
-                  <img src={docimg}  className="logoimg"/>
-               </div> */}
+                  // {/* <img src={docimg}  className="logoimg"/> */}
+                  {/* <h1>Doctor's Appointment</h1> */}
+               {/* </div> */} 
                <div id="heading">
                      <img src={mainheading} />
                </div>
