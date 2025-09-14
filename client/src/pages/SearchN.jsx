@@ -2,10 +2,10 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
-import BackendURL from "../util/BackEndUrl";
+import BackendURL from '../util/BackendUrl';
 import axios from 'axios';
 const SearchName=()=>{
-    const[mydata,setMydata]=useState({})
+    const[mydata,setMydata]=useState([])
     const[name,setName]=useState("")
     const handleSubmit=async(e)=>{
         e.preventDefault();
@@ -16,7 +16,7 @@ const SearchName=()=>{
     }
     return(
         <>
-        <h3 className='h33'>Search By Speciality</h3>
+        <h3 className='h33'>Search By Name</h3>
         <Form id="form2">
       <Form.Group className="mb-3" >
         <Form.Label>Enter Speciality</Form.Label>
@@ -26,7 +26,7 @@ const SearchName=()=>{
              Search
            </Button>
          </Form>
-         <Table striped bordered hover variant="dark" className='tbl'>
+         <Table striped bordered hover variant='dark' className='tbl'>
                <thead>
                  <tr>
                     <th>NO</th>
