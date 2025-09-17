@@ -19,9 +19,20 @@ const SearchSpe=()=>{
         <h3 className='h33'>Search By Speciality</h3>
         <Form id="form2">
       <Form.Group className="mb-3" >
-        <Form.Label>Enter Speciality</Form.Label>
-        <Form.Control type="text" name="name" value={spe} onChange={(e)=>{setSpe(e.target.value)}}/>
-     </Form.Group>
+        <Form.Label>Select Specialization</Form.Label>
+       <Form.Select aria-label="Default select example" value={spe} onChange={(e)=>setSpe(e.target.value)}>
+      <option>Open this select menu</option>
+      <option value="Cardiologist">Cardiologist</option>
+      <option value="Gastroenterologist">Gastroenterologist</option>
+      <option value="Neurologist">Neurologist</option>
+       <option value="Radiologist">Radiologist</option>
+        <option value="General Physician">General Physician</option>
+         <option value="ENT Specialist">ENT Specialist</option>
+          <option value="Dentist">Dentist</option>
+           <option value="Gynecologist">Gynecologist</option>
+            <option value="Surgeon">Surgeon</option>
+    </Form.Select>
+      </Form.Group>
      <Button variant="primary" type="submit" onClick={handleSubmit}>
              Search
            </Button>
