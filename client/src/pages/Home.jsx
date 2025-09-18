@@ -8,9 +8,10 @@ import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 import BackendURL from '../util/BackEndUrl';
 import axios from 'axios';
-
+import {useNavigate} from "react-router-dom"
 const Home=()=>{
   const[mydata,setMydata]=useState([]);
+  const navigate=useNavigate();
   const getData=async()=>{
     let api=`${BackendURL}/doctor/getdoctor`;
     try {
@@ -35,7 +36,7 @@ const Home=()=>{
           Speciality:{item.speciality}<br/>
           City:{item.city}
         </Card.Text>
-        <Button variant="primary">Get Appointment</Button>
+        <Button variant="primary" onClick={()=>{navigate(`/getappoint/${item._id}`)}}>Get Appointment</Button>
       </Card.Body>
     </Card>
       </>

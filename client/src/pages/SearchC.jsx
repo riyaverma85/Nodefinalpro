@@ -53,7 +53,14 @@ const SearchCity=()=>{
                  </tr>
                </thead>
                <tbody>
-                {City}
+                {mydata.length>=1 ?(
+                  <>
+                  {City}
+                  </>
+                ):(
+                  <span>No Record Found!!</span>
+                )}
+                
                </tbody>
         </Table>
          

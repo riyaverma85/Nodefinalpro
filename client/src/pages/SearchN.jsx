@@ -19,7 +19,7 @@ const SearchName=()=>{
         <h3 className='h33'>Search By Name</h3>
         <Form id="form2">
       <Form.Group className="mb-3" >
-        <Form.Label>Enter Speciality</Form.Label>
+        <Form.Label>Enter Name</Form.Label>
         <Form.Control type="text" name="name" value={name} onChange={(e)=>{setName(e.target.value)}}/>
      </Form.Group>
      <Button variant="primary" type="submit" onClick={handleSubmit}>
