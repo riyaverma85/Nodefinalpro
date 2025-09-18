@@ -74,10 +74,6 @@ const Header=()=>{
    return(
         <>
             <div id="header">
-               {/* <div id="logo">
-                  // {/* <img src={docimg}  className="logoimg"/> */}
-                  {/* <h1>Doctor's Appointment</h1> */}
-               {/* </div> */} 
                <div id="heading">
                      <img src={mainheading} />
                </div>

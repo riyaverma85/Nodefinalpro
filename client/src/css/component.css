@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: linear-gradient(90deg, #036fa9, #035c79); */
   background-color: white;
   padding: 15px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -44,8 +43,7 @@
 }
 /*================================================================NAVBAR============================================================================*/
 #topmenu{
-    /* background-color: #103568; */
-    background: #0077b6;
+    background: #023e8a;
     color: aliceblue;
 }
 #head{
@@ -62,9 +60,13 @@
     color: aliceblue;
     font-weight: bold;
 }
+.pages:hover{
+  text-decoration: underline;
+}
 
 /* ============================================ Modal Styles========================================================= ===== */
 .modal-content {
+  width: 450px;
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
@@ -78,7 +80,6 @@
 
 .modal-title {
   font-weight: bold;
-  
 }
 
 .modal-footer button {
@@ -121,9 +122,81 @@ form button:hover {
   transform: translateY(-2px);
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
+
+/* ==============================================Footer Design=========================================================================================== */
+
+.footer {
+  background: linear-gradient(180deg, #0b2447, #062539);
+  color: #cbd5e1;
+  padding: 40px 20px 20px;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.newsletter input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  outline: none;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =================================================Responsive================================================================= */
+/* =================================================Header Responsive================================================================== ===== */
+@media (max-width:450px) {
   #header {
+    width: 100%;
     flex-direction: column;
     text-align: center;
   }
@@ -139,133 +212,56 @@ form button:hover {
   .modal-dialog {
     margin: 20px;
   }
-}
-/* Footer General */
-.footer {
- /* background-color: #103568; */
-  background: #0077b6;
-  color: white;
-  padding: 50px 20px 20px;
-  font-family: Arial, sans-serif;
-}
 
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+ 
+.modal-content {
+  margin: 1rem;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
+ .modal-header,
+  .modal-footer {
+    flex-wrap: wrap;           
+    text-align: center;
+    justify-content: center;
+  }
 
-.footer h2, 
-.footer h3 {
-  margin-bottom: 15px;
-  font-weight: bold;
+  .modal-footer button {
+    width: 100%;               
+    margin: 5px 0;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  form label {
+    font-size: 14px;         
+  }
+form input,
+  form select {
+    width: 100% !important;    
+    font-size: 14px;
+  }
+
+  form button {
+    font-size: 14px;  
+    padding: 8px;
+  }
 }
-
-.footer p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* Links */
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-section a:hover {
-  color: #ffd43b; /* yellow hover */
-}
-
-/* Social Icons */
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  font-size: 20px;
-  margin-right: 10px;
-  color: white;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #ffd43b;
-}
-
-/*=============================== Newsletter ====================================================================*/
-.newsletter {
-  margin-top: 15px;
-  display: flex;
-}
-
-.newsletter input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 5px 0 0 5px;
-  border: none;
-  outline: none;
-}
-
-.newsletter button {
-  padding: 10px 15px;
-  border: none;
-  background: #ffd43b;
-  color: black;
-  font-weight: bold;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.newsletter button:hover {
-  background: #ffb703;
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  padding-top: 15px;
-  font-size: 14px;
-  color: #ddd;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
+/*=========================================FOOTER====================================================================================*/
+@media (max-width: 768px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .newsletter {
-    flex-direction: column;
-  }
-
-  .newsletter input {
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  .newsletter button {
-    border-radius: 5px;
-  }
+    gap: 18px;
+    }
 }
+
+
+

@@ -29,7 +29,7 @@ const GetAppoint=()=>{
    }
 
    const handleSubmit=async(e)=>{
-       e.prevenDefault();
+       e.preventDefault();
        let api=`${BackendURL}/doctor/patientInfo`
        try {
         const res=await axios.post(api,{id:id,...input});

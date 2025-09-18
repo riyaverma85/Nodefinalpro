@@ -6,10 +6,159 @@
     color: rgb(12, 12, 12);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/*==================================================carousel===============================================================================================*/
+#outlet{
+    margin: 2rem;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(89, 116, 178, 0.5); /* dark transparent background */
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  opacity: 1; /* Ensure they're visible */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100% 100%;
+  filter: invert(1); /* makes the arrow white */
+}
+/*======================================================HOME PAGE=================================================================*/
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .text {
+      flex: 1 1 500px;
+      padding: 20px;
+    }
+
+    .text h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .text p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .text button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #11418a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .text button:hover{
+    background-color: #3a67ab;
+}
+    .image {
+      flex: 1 1 400px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content h1 {
+        font-size: 32px;
+      }
+
+      .text-content button {
+        width: 100%;
+      }
+}
 /*========================================================HOME=======================================================================*/
 .span{
     font-weight: bold;
     color: cadetblue;
+}
+#icon{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 10px;
+    background-color: rgb(153, 187, 200);
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+#box1{
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+#icon div:hover {
+  transform: translateY(-5px); /* Thoda upar le jaata hai */
+  cursor: pointer;            /* Cursor ko pointer banata hai */
+  transition: transform 0.3s ease; /* Smooth animation ke liye */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#icon div{
+    width: 350px;
+    height: auto;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+#icons{
+    font-size:20px;
+}
+#icon h3{
+    font-size: 18px;
+}
+#icon p{
+    font-size: 15px;
+    padding-left: 15px;
+}
+/*======================================================HOME CARD==============================================================*/
+#card{
+    margin-top: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border: none;
+    background-color:whitesmoke;
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.cartbtn{
+  background-color: rgb(33, 73, 231);
+  color: rgb(5, 5, 5);
+}
+ .cartbtn:hover{
+  background-color: rgb(2, 16, 53);
+  color: aliceblue;
+}
+#card:hover {
+  transform: perspective(600px) translateZ(20px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 /*===================================================LAYOUT===================================================================================*/
 .outletdiv{
@@ -45,6 +194,130 @@
     width: 100px;
     height: 100px;
 }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+}
+
+/*======================================================SEARCH BY NAME =============================================================================*/
+.search-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 40px;
+  background: #fff;
+}
+
+.search-content {
+  flex: 1;
+}
+
+.search-content h1 {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.search-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  border: none;
+  padding: 14px 20px;
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar button {
+  background: #0077b6;
+  border: none;
+  padding: 14px 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background: #023e8a;
+}
+
+/* Features list */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features li {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Image section */
+.search-image {
+  flex: 1;
+  text-align: center;
+}
+
+.search-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .search-bar {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .search-bar button {
+    border-top: 1px solid #ddd;
+  }
+
+  .search-image img {
+    max-width: 100%;
+  }
+}
+
 /*=======================================================Search City PAGE================================================================================*/
 #searchtable{
     margin-top: 40px;
@@ -55,3 +328,33 @@
     
 }
 
+/*=============================================MEDIA QUERY=======================================================================================*/
+@media(max-width:450px){
+#icon {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 10px;
+    background-color: rgb(153, 187, 200);
+    margin-top: 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#card{
+    margin-top: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: none;
+    background-color:whitesmoke;
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+   
+
+
+}

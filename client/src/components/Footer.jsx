@@ -16,13 +16,7 @@ const Footer=()=>{
             health consultations, and quality healthcare services at your
             fingertips.
           </p>
-          {/* <div className="social-icons">
-            <a href="#">🌐</a>
-            <a href="#">📘</a>
-            <a href="#">🐦</a>
-            <a href="#">📸</a>
-            <a href="#">▶️</a>
-          </div> */}
+          
         </div>
 
         {/* Quick Links */}
@@ -56,8 +50,8 @@ const Footer=()=>{
           <p>📞 +91 98765 43210</p>
           <p>📧 support@medicareplus.com</p>
           <form className="newsletter">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
+            <input type="email" placeholder="Enter your email" /><br/>
+            {/* <button type="submit">Subscribe</button> */}
           </form>
         </div>
       </div>

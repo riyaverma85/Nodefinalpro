@@ -41,10 +41,12 @@ const Patient=()=>{
          <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>No</th>
+          <th>Patient Name</th>
+          <th>Diseases</th>
+          <th>Address</th>
+          <th>Contact</th>
+          <th>Email</th>
         </tr>
       </thead>
       <tbody>
