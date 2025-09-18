@@ -80,20 +80,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .text-content h1 {
-        font-size: 32px;
-      }
-
-      .text-content button {
-        width: 100%;
-      }
-}
+    
 /*========================================================HOME=======================================================================*/
 .span{
     font-weight: bold;
@@ -149,11 +136,11 @@
     cursor: pointer;
 }
 .cartbtn{
-  background-color: rgb(33, 73, 231);
+  background: #0077b6;
   color: rgb(5, 5, 5);
 }
  .cartbtn:hover{
-  background-color: rgb(2, 16, 53);
+  background: #023e8a;
   color: aliceblue;
 }
 #card:hover {
@@ -200,7 +187,7 @@ body {
   background: #f9f9f9;
 }
 
-/*======================================================SEARCH BY NAME =============================================================================*/
+/*======================================================SEARCH=============================================================================*/
 .search-section {
   display: flex;
   align-items: center;
@@ -227,7 +214,7 @@ body {
   color: #444;
 }
 
-/* Search bar */
+
 .search-bar {
   display: flex;
   margin-bottom: 20px;
@@ -284,40 +271,6 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .search-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .search-content h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 450px) {
-  .search-bar {
-    flex-direction: column;
-    border-radius: 10px;
-  }
-
-  .search-bar input,
-  .search-bar button {
-    width: 100%;
-    border-radius: 0;
-  }
-
-  .search-bar button {
-    border-top: 1px solid #ddd;
-  }
-
-  .search-image img {
-    max-width: 100%;
-  }
-}
-
 /*=======================================================Search City PAGE================================================================================*/
 #searchtable{
     margin-top: 40px;
@@ -327,6 +280,98 @@ body {
     padding: 2rem;
     
 }
+/*=============================================================CONTACT PAGE================================================================*/
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h1 {
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/*================================ Contact Form============================================================ */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.contact-form button {
+  padding: 12px;
+  border-radius: 25px;
+  background-color: #0077b6;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0096c7;
+}
+
 
 /*=============================================MEDIA QUERY=======================================================================================*/
 @media(max-width:450px){
@@ -354,7 +399,74 @@ body {
     transform-style: preserve-3d;
     cursor: pointer;
 }
-   
+@media (max-width: 768px) {
+  .search-section {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .search-content h1 {
+    font-size: 2rem;
+  }
+}
 
+/*======================================================SEARCH PAGE===============================================================================*/
+  .search-bar {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .search-bar button {
+    border-top: 1px solid #ddd;
+ }
+
+  .search-image img {
+    max-width: 100%;
+  }
+
+}
+
+/* ===================================================== Responsive ========================================================= */
+@media (max-width: 768px) {
+.container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content h1 {
+        font-size: 32px;
+      }
+
+      .text-content button {
+        width: 100%;
+      }
+}
+@media (max-width: 768px) {
+.contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

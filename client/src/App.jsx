@@ -5,10 +5,12 @@ import Layout from "./Layout";
 import Home from "./pages/Home";
 import Doctorhome from "./Doctorhome";
 import Patient from "./pages/Patient";
-import SearchSpe from "./pages/SearchSpe";
-import SearchName from "./pages/SearchN";
-import SearchCity from "./pages/SearchC";
+import Search from "./pages/Search";
+// import SearchSpe from "./pages/SearchSpe";
+// import SearchName from "./pages/SearchN";
+// import SearchCity from "./pages/SearchC";
 import GetAppoint from "./pages/GetAppoint";
+import Contact from "./pages/Contact";
 const App=()=>{
   return(
     <>
@@ -17,9 +19,11 @@ const App=()=>{
              <Route path="/" element={<Layout/>}>
                 <Route index element={<Home/>}/>
                 <Route path="home" element={<Home/>}/>
-                <Route path="searchname" element={<SearchName/>}/>
+                <Route path="search" element={<Search/>}/>  
+                <Route path="contact" element={<Contact/>}/>
+                {/* <Route path="searchname" element={<SearchName/>}/>
                 <Route path="searchcity" element={<SearchCity/>}/>
-                <Route path="speciality" element={<SearchSpe/>}/>
+                <Route path="speciality" element={<SearchSpe/>}/> */}
                 <Route path="getappoint/:id" element={<GetAppoint/>}/>
                 
             </Route>
