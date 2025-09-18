@@ -67,7 +67,7 @@
 
     .text button:hover{
     background-color: #3a67ab;
-}
+    }
     .image {
       flex: 1 1 400px;
       padding: 20px;
@@ -82,10 +82,7 @@
     }
     
 /*========================================================HOME=======================================================================*/
-.span{
-    font-weight: bold;
-    color: cadetblue;
-}
+
 #icon{
     margin: 1rem;
     display: flex;
@@ -125,7 +122,7 @@
 /*======================================================HOME CARD==============================================================*/
 #card{
     margin-top: 30px;
-    width: 300px;
+    width: 270px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -196,7 +193,6 @@ body {
   gap: 40px;
   background: #fff;
 }
-
 .search-content {
   flex: 1;
 }
@@ -213,8 +209,6 @@ body {
   line-height: 1.6;
   color: #444;
 }
-
-
 .search-bar {
   display: flex;
   margin-bottom: 20px;
@@ -241,7 +235,6 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .search-bar button:hover {
   background: #023e8a;
 }
@@ -252,14 +245,13 @@ body {
   padding: 0;
   margin: 0;
 }
-
 .features li {
   margin: 8px 0;
   font-size: 1rem;
   color: #333;
 }
 
-/* Image section */
+/*-=============================================Image section====================================================== */
 .search-image {
   flex: 1;
   text-align: center;
@@ -374,6 +366,8 @@ body {
 
 
 /*=============================================MEDIA QUERY=======================================================================================*/
+/* ===================================================== Responsive ========================================================= */
+
 @media(max-width:450px){
 #icon {
     margin: 1rem;
@@ -409,6 +403,21 @@ body {
     font-size: 2rem;
   }
 }
+/*=======================================================HOME PAGE=====================================================================*/
+@media (max-width: 768px) {
+.container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content h1 {
+        font-size: 32px;
+      }
+
+      .text-content button {
+        width: 100%;
+      }
+}
 
 /*======================================================SEARCH PAGE===============================================================================*/
   .search-bar {
@@ -432,21 +441,8 @@ body {
 
 }
 
-/* ===================================================== Responsive ========================================================= */
-@media (max-width: 768px) {
-.container {
-        flex-direction: column;
-        text-align: center;
-      }
+/* ===================================================== CONTACT PAGE ========================================================= */
 
-      .text-content h1 {
-        font-size: 32px;
-      }
-
-      .text-content button {
-        width: 100%;
-      }
-}
 @media (max-width: 768px) {
 .contact-container {
     flex-direction: column;
