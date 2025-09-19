@@ -43,13 +43,12 @@
 }
 /*================================================================NAVBAR============================================================================*/
 #topmenu {
-  background-color: #0077cc;
+  background-color: #0055cc;
   padding: 10px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
 
-/* Container flex layout */
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -69,7 +68,7 @@
 /* Nav links styling */
 .pages {
   font-size: 1rem;
-  margin-left: 35px; /* More space between nav items */
+  margin-left: 35px; 
   color: #ffffff !important;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
@@ -88,11 +87,9 @@
   bottom: -3px;
   transition: width 0.3s ease;
 }
-
 .pages:hover::after {
   width: 100%;
 }
-
 .pages:hover {
   color: #e0e0e0 !important;
 }
