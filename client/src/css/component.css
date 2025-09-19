@@ -151,7 +151,7 @@ form button:hover {
   transform: translateY(-2px);
 }
 /*=======================================================DOCTORHOME==========================================================*/
-.doctor-home-container {
+.doctorhome {
   max-width: 450px;
   width: 100%;
   margin: 40px auto;
@@ -162,14 +162,14 @@ form button:hover {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.doctor-home-header {
+.doctorheader {
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: center;
   color: #2c3e50;
 }
 
-.nav-link {
+.nav1-link {
   display: inline-block;
   margin-bottom: 20px;
   text-decoration: none;
@@ -180,11 +180,11 @@ form button:hover {
   transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
+.nav1-link:hover {
   background-color: #2980b9;
 }
 
-.outlet-container {
+.outlethome{
   margin-top: 20px;
 }
 

@@ -3,13 +3,13 @@ import { Link, Outlet } from "react-router-dom";
 
 const Doctorhome = () => {
   return (
-    <div className="doctor-home-container">
-      <h3 className="doctor-home-header">Welcome to Doctor Dashboard!!</h3>
+    <div className="doctorhome">
+      <h3 className="doctorheader">Welcome to Doctor Dashboard!!</h3>
       <div>
         <div>
-          <Link to="patientlist" className="nav-link">Patient List</Link>
+          <Link to="patientlist" className="nav1-link">Patient List</Link>
         </div>
-        <div className="outlet-container">
+        <div className="outlethome">
           <Outlet />
         </div>
       </div>
