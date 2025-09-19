@@ -11,6 +11,7 @@ import Search from "./pages/Search";
 // import SearchCity from "./pages/SearchC";
 import GetAppoint from "./pages/GetAppoint";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 const App=()=>{
   return(
     <>
@@ -19,6 +20,7 @@ const App=()=>{
              <Route path="/" element={<Layout/>}>
                 <Route index element={<Home/>}/>
                 <Route path="home" element={<Home/>}/>
+                <Route path="about" element={<About/>}/>
                 <Route path="search" element={<Search/>}/>  
                 <Route path="contact" element={<Contact/>}/>
                 <Route path="getappoint" element={<GetAppoint/>}/>

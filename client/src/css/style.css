@@ -162,6 +162,99 @@
     width: 90%;
     margin: auto;
 }
+/*=================================================================ABOUT PAGE================================================================*/
+/* src/pages/About.css */
+
+.about-container {
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 2.2rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Features Section */
+.about-features {
+  margin-bottom: 40px;
+}
+
+.about-features h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 250px;
+  max-width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-box h4 {
+  margin-top: 15px;
+  color: #333;
+}
+
+.feature-box p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.about-icon {
+  font-size: 2.5rem;
+  color: #17a2b8;
+}
+
+/* Team/Mission Section */
+.about-team {
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.about-team p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
 /*=======================================================Search PAGE================================================================================*/
 #form2{
     margin-top: 20px;
@@ -456,6 +549,31 @@ body {
       .text-content button {
         width: 100%;
       }
+}
+/*====================================================ABOUT PAGE============================================================*/
+
+@media (max-width: 450px) {
+  .about-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-features h2,
+  .about-team h2 {
+    font-size: 1.4rem;
+  }
+
+  .feature-box {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .about-container {
+    padding: 20px 10px;
+  }
+
+  .about-icon {
+    font-size: 2rem;
+  }
 }
 
 /*======================================================SEARCH PAGE===============================================================================*/
