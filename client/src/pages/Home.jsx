@@ -8,7 +8,7 @@ import ban2 from "../images/image1.avif";
 import ban3 from "../images/syrup.avif";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 import {useNavigate} from "react-router-dom"
@@ -19,6 +19,7 @@ import Modal from 'react-bootstrap/Modal';
 const Home=()=>{
   const[mydata,setMydata]=useState([]);
   const navigate=useNavigate();
+  const doctorSectionRef = useRef(null);
   const getData=async()=>{
     let api=`${BackendUrl}/doctor/getdoctor`;
     try {
@@ -75,7 +76,7 @@ const Home=()=>{
                    with experienced doctors, consult online, and manage your health records 
                    all in one place. Fast, easy, and secure for you and your family.
                  </p>
-                 <button>Book Appointment</button>
+                 <button onClick={() => doctorSectionRef.current?.scrollIntoView({ behavior: 'smooth' })}>Book Appointment</button>
             </div>
 
             <div className="image">
@@ -135,7 +136,7 @@ const Home=()=>{
 
       <h3 className='h33'> Top Doctors </h3>
 
-      <div id="docList">
+      <div id="docList" ref={doctorSectionRef}>
         {list}
       </div>
         </>

@@ -10,8 +10,11 @@ const TopMenu=()=>{
           <Navbar.Brand href="#home" id='head'>DOCTRO</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="home" className='pages'>Home</Nav.Link>
+            <Nav.Link as={Link} to="about" className='pages'>About</Nav.Link>
             <Nav.Link as={Link} to="search" className='pages'>Search</Nav.Link>
+            <Nav.Link as={Link} to="getappoint" className='pages'>Getappointment</Nav.Link>
             <Nav.Link as={Link} to="contact" className='pages'>Contact</Nav.Link>
+            
             {/* <Nav.Link as={Link} to="searchname" className='pages'>SearchByName</Nav.Link>
             <Nav.Link as={Link} to="searchcity" className='pages'>SearchByCity</Nav.Link>
             <Nav.Link as={Link} to="speciality" className='pages'>SearchBySpeciality</Nav.Link> */}

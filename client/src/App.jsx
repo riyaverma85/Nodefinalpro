@@ -21,6 +21,7 @@ const App=()=>{
                 <Route path="home" element={<Home/>}/>
                 <Route path="search" element={<Search/>}/>  
                 <Route path="contact" element={<Contact/>}/>
+                <Route path="getappoint" element={<GetAppoint/>}/>
                 {/* <Route path="searchname" element={<SearchName/>}/>
                 <Route path="searchcity" element={<SearchCity/>}/>
                 <Route path="speciality" element={<SearchSpe/>}/> */}
