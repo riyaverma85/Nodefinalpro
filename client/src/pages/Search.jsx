@@ -49,7 +49,7 @@ const Search = () => {
         </div>
       </section>
 
-      {/* Search Results */}
+      {/*====================================== Search Table============================================= */}
       <h3 className='h33'>Search Results</h3>
       <Table striped bordered hover className='tbl'>
         <thead>
