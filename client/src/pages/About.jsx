@@ -1,8 +1,4 @@
 
-// src/pages/About.jsx
-
-import React from 'react';
-import './About.css';
 import { FaStethoscope, FaUserMd, FaMobileAlt, FaLock } from 'react-icons/fa';
 
 const About = () => {
