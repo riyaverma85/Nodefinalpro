@@ -42,7 +42,7 @@ const GetAppoint=()=>{
     return(
         <>
          <h3 className='h33'>Book your appointment</h3>
-         <Card style={{ width: '18rem' }}>
+         <Card style={{ width: '18rem' }} className='doctor-card'>
       <Card.Img variant="top" src={mydata.image} height="270" />
       <Card.Body>
         <Card.Title><span className='span'>Dr.:{mydata.doctorname}</span> </Card.Title>

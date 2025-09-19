@@ -13,6 +13,8 @@ import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 import {useNavigate} from "react-router-dom"
 import img1 from "../images/banner.webp"
+import Spinner from 'react-bootstrap/Spinner';
+import Modal from 'react-bootstrap/Modal';
 
 const Home=()=>{
   const[mydata,setMydata]=useState([]);
@@ -30,6 +32,21 @@ const Home=()=>{
   useEffect(()=>{
     getData();
   },[])
+
+  // Bootstrap Modal Spinner
+  const LoadingModal = ({ show }) => (
+    <Modal show={show} backdrop="static" centered>
+      <Modal.Body className="text-center">
+        <Spinner animation="border" role="status" variant="primary" />
+        <p className="mt-3">Loading doctors...</p>
+      </Modal.Body>
+    </Modal>
+  );
+
+  // Show modal when loading
+  if (mydata.length === 0) {
+    return <LoadingModal show={true} />;
+  }
   const list=mydata.map((item)=>{
     return(
       <>
