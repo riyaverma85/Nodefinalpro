@@ -42,17 +42,12 @@
   transform: scale(1.05);
 }
 /*================================================================NAVBAR============================================================================*/
-/* TopMenu.css */
-
-/* Navbar container */
 #topmenu {
-  background-color: #0077cc; /* Medical Blue */
+  background-color: #0077cc; 
   padding: 10px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
-
-/* Branding */
 #head {
   font-size: 1.6rem;
   font-weight: 700;
@@ -60,8 +55,6 @@
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
 }
-
-/* Nav Links */
 .pages {
   font-size: 1rem;
   margin-left: 20px;
