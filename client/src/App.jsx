@@ -19,11 +19,11 @@ const App=()=>{
           <Routes>
              <Route path="/" element={<Layout/>}>
                 <Route index element={<Home/>}/>
-                <Route path="home" element={<Home/>}/>
-                <Route path="about" element={<About/>}/>
-                <Route path="search" element={<Search/>}/>  
-                <Route path="contact" element={<Contact/>}/>
-                <Route path="getappoint" element={<GetAppoint/>}/>
+                <Route path="/home" element={<Home/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/search" element={<Search/>}/>  
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/getappoint" element={<GetAppoint/>}/>
                 {/* <Route path="searchname" element={<SearchName/>}/>
                 <Route path="searchcity" element={<SearchCity/>}/>
                 <Route path="speciality" element={<SearchSpe/>}/> */}
