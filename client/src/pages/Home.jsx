@@ -16,6 +16,7 @@ import img1 from "../images/banner.webp"
 import Spinner from 'react-bootstrap/Spinner';
 import Modal from 'react-bootstrap/Modal';
 
+
 const Home=()=>{
   const[mydata,setMydata]=useState([]);
   const navigate=useNavigate();
@@ -113,7 +114,7 @@ const Home=()=>{
 
   {/*===============================================================================================================================================*/}
       <div id="icon">
-           <div id="box1">
+           <div >
              <h3><FaCalendarCheck id="icons" /> EASY APPOINTMENT</h3>
              <p>Book your doctor appointment online within minutes, anytime and anywhere.</p>
            </div>

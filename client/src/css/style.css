@@ -87,43 +87,57 @@
     }
     
 /*========================================================HOME=======================================================================*/
+/* ===================== ICON SECTION ===================== */
+#icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
 
-#icon{
-    margin: 1rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    gap: 10px;
-    background-color: rgb(153, 187, 200);
-    margin-top: 40px;
-    flex-wrap: wrap;
+#icon > div {
+  background-color: #ffffff;
+  width: 230px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
-#box1{
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
+#icon > div:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
 }
-#icon div:hover {
-  transform: translateY(-5px); /* Thoda upar le jaata hai */
-  cursor: pointer;            /* Cursor ko pointer banata hai */
-  transition: transform 0.3s ease; /* Smooth animation ke liye */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+#icon h3 {
+  font-size: 1rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
-#icon div{
-    width: 350px;
-    height: auto;
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    padding: 0.8rem;
+
+#icon p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
 }
-#icons{
-    font-size:20px;
+
+#icons {
+  font-size: 1.2rem;
+  color: #007bff;
 }
-#icon h3{
-    font-size: 18px;
-}
-#icon p{
-    font-size: 15px;
-    padding-left: 15px;
-}
+
+
+
 /*======================================================HOME CARD==============================================================*/
 #card{
     margin-top: 30px;

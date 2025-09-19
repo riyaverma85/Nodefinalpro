@@ -42,41 +42,39 @@
   transform: scale(1.05);
 }
 /*================================================================NAVBAR============================================================================*/
-/* TopMenu.css */
-
-/* Navbar container */
 #topmenu {
-  background-color: #0077cc; /* Medical Blue */
+  background-color: #0077cc;
   padding: 10px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
 
-/* Navbar Brand */
-#head {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #ffffff !important;
-  letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Spacing between brand and nav */
+/* Container flex layout */
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Nav Links */
+/* Navbar Brand (DOCTRO) */
+#head {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  margin-right: auto;  /* Push nav to far right */
+}
+
+/* Nav links styling */
 .pages {
   font-size: 1rem;
-  margin-left: 25px;
+  margin-left: 35px; /* More space between nav items */
   color: #ffffff !important;
   font-weight: 500;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
   font-family: 'Poppins', sans-serif;
   position: relative;
+  transition: color 0.3s ease;
 }
 
 /* Hover underline effect */
@@ -98,11 +96,6 @@
 .pages:hover {
   color: #e0e0e0 !important;
 }
-
-
-
-
-
 /* ============================================ Modal Styles========================================================= ===== */
 .modal-content {
   width: 450px;
@@ -290,27 +283,20 @@ form input,
   }
 }
 /*====================================NAVBAR PAGE=====================================================================*/
-
-
 @media (max-width: 768px) {
   #topmenu {
     padding: 8px 10px;
   }
 
   .pages {
-    margin-left: 15px;
+    margin-left: 20px;
     font-size: 0.95rem;
-  }
-
-  .navbar .container {
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
 
 @media (max-width: 450px) {
   #head {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .navbar-nav {
@@ -334,6 +320,7 @@ form input,
     text-align: left;
   }
 }
+
 
 /*=========================================FOOTER====================================================================================*/
 @media (max-width: 768px) {
