@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-import BackendUrl from "../util/BackendUrl";
+import BackendUrl from "../util/backendUrl";
 import {ToastContainer,toast} from "react-toastify"
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css"

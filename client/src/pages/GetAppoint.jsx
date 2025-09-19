@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useParams, useNavigate } from 'react-router-dom'; 
-import BackendUrl from "../util/BackendUrl";
+import BackendUrl from "../util/backendUrl";
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 

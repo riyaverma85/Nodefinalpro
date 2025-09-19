@@ -103,7 +103,7 @@
 
 import Table from 'react-bootstrap/Table';
 import { useState } from "react";
-import BackendUrl from "../util/BackendUrl";
+import BackendUrl from "../util/backendUrl";
 import axios from 'axios';
 import img2 from "../images/banner2.avif";
 

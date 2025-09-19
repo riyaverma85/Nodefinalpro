@@ -423,8 +423,6 @@ body {
   font-size: 24px;
   color: #333;
 }
-
-/* Doctor Card */
 .doctor-card {
   max-width: 400px;
   margin: 0 auto;
@@ -566,7 +564,6 @@ body {
     padding: 20px 10px;
     gap: 20px;
   }
-
   #docList #card {
     width: 90%;
   }

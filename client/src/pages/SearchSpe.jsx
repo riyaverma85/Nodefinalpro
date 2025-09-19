@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
-import BackendUrl from "../util/BackendUrl";
+import BackendUrl from "../util/backendUrl";
 import axios from 'axios';
 const SearchSpe=()=>{
     const[mydata,setMydata]=useState([])
