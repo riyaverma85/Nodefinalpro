@@ -117,7 +117,7 @@
 
 #icon h3 {
   font-size: 1rem;
-  color: #007bff;
+  color: #0077cc;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -171,7 +171,7 @@
 }
 
 #docList #card .card-title {
-  color: #007bff;
+  color: #0077cc;
   font-weight: 600;
   margin-bottom: 10px;
   font-size: 1.1rem;
@@ -185,7 +185,7 @@
 
 #docList #card .cartbtn {
   margin-top: 10px;
-  background-color: #007bff;
+  background-color: #0077cc;;
   border: none;
   transition: background-color 0.3s ease;
   width: 100%;
