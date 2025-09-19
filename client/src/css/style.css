@@ -168,14 +168,59 @@
     margin: 20px;
 }
 
-#docList
-{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: auto;
+/* ====================================== DOCTOR LIST SECTION========================================== ============== */
+#docList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
 }
+
+
+#docList #card {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+#docList #card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+#docList #card .card-title {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+#docList #card .card-text {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+#docList #card .cartbtn {
+  margin-top: 10px;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-weight: 500;
+}
+
+#docList #card .cartbtn:hover {
+  background-color: #0056b3;
+}
+
+
+
 /*=================================================================ABOUT PAGE================================================================*/
 .about-container {
   padding: 50px 30px;
@@ -276,10 +321,6 @@
   line-height: 1.7;
   color: #555;
 }
-
-
-
-
 /*=======================================================Search PAGE================================================================================*/
 #form2{
     margin-top: 20px;
@@ -527,17 +568,24 @@ body {
 
 @media(max-width:450px){
 #icon {
-    margin: 1rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    gap: 10px;
-    background-color: rgb(153, 187, 200);
-    margin-top: 40px;
-    flex-wrap: wrap;
     flex-direction: column;
-}
-#card{
+    padding: 20px 10px;
+  }
+  #icon > div {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  #icon h3 {
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #icon p {
+    font-size: 0.9rem;
+  }
+
+   #card{
     margin-top: 30px;
     width: 300px;
     display: flex;
