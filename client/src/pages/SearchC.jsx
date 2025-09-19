@@ -2,14 +2,14 @@ import Button from 'react-bootstrap/Button';
  import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
-import BackendURL from '../util/BackendUrl';
+import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 const SearchCity=()=>{
     const[mydata,setMydata]=useState([])
     const[city,setCity]=useState("")
     const handleSubmit=async(e)=>{
         e.preventDefault();
-        let api=`${BackendURL}/doctor/getcity`;
+        let api=`${BackendUrl}/doctor/getcity`;
         const res=await axios.post(api,{city:city});
         console.log(res.data);
         setMydata(res.data);

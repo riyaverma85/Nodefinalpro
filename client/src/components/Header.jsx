@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-import BackendURL from "../util/BackendUrl";
+import BackendUrl from "../util/BackendUrl";
 import {ToastContainer,toast} from "react-toastify"
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css"
@@ -38,7 +38,7 @@ const Header=()=>{
    }
    const handleSubmit=async(e)=>{
     e.preventDefault();
-    let api=`${BackendURL}/doctor/registration`;
+    let api=`${BackendUrl}/doctor/registration`;
     if(!image) return alert("Please upload doctor image");
     const formData=new FormData();
     formData.append("file",image)
@@ -61,7 +61,7 @@ const Header=()=>{
 
    const loginSubmit=async(e)=>{
     e.preventDefault();
-    let api=`${BackendURL}/doctor/login`;
+    let api=`${BackendUrl}/doctor/login`;
     try {
       const res=await axios.post(api,{email:emaillog,password:passwordlog})
       console.log(res.data);

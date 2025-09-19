@@ -9,7 +9,7 @@ import ban3 from "../images/syrup.avif";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
-import BackendURL from '../util/BackEndUrl';
+import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 import {useNavigate} from "react-router-dom"
 import img1 from "../images/banner.webp"
@@ -18,7 +18,7 @@ const Home=()=>{
   const[mydata,setMydata]=useState([]);
   const navigate=useNavigate();
   const getData=async()=>{
-    let api=`${BackendURL}/doctor/getdoctor`;
+    let api=`${BackendUrl}/doctor/getdoctor`;
     try {
       const res=await axios.get(api);
       console.log(res.data);

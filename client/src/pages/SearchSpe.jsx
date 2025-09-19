@@ -2,14 +2,14 @@ import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
-import BackendURL from "../util/BackEndUrl";
+import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 const SearchSpe=()=>{
     const[mydata,setMydata]=useState([])
     const[spe,setSpe]=useState("")
     const handleSubmit=async(e)=>{
         e.preventDefault();
-        let api=`${BackendURL}/doctor/getspeciality`;
+        let api=`${BackendUrl}/doctor/getspeciality`;
         const res=await axios.post(api,{speciality:spe});
         console.log(res.data);
         setMydata(res.data);

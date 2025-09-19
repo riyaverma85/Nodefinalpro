@@ -1,12 +1,12 @@
 import { useState } from "react";
-import BackendURL from "../util/BackendUrl";
+import BackendUrl from "../util/BackendUrl";
 import axios from "axios";
 import { useEffect } from "react";
 import Table from 'react-bootstrap/Table';
 const Patient=()=>{
     const[mydata,setMydata]=useState([]);
     const getData=async()=>{
-        let api=`${BackendURL}/doctor/patientshow/?id=${localStorage.getItem("docid")}`;
+        let api=`${BackendUrl}/doctor/patientshow/?id=${localStorage.getItem("docid")}`;
         try {
             const res=await axios.get(api);
             console.log(res.data);

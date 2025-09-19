@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useParams } from 'react-router-dom';
-import BackendURL from '../util/BackendUrl';
+import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 const GetAppoint=()=>{
@@ -12,7 +12,7 @@ const GetAppoint=()=>{
     const[mydata,setMydata]=useState({});
     const[input,setInput]=useState({});
     const getData=async()=>{
-        let api=`${BackendURL}/doctor/doctorInfo/?id=${id}`
+        let api=`${BackendUrl}/doctor/doctorInfo/?id=${id}`
         const res=await axios.get(api);
         console.log(res.data);
         setMydata(res.data)
@@ -30,7 +30,7 @@ const GetAppoint=()=>{
 
    const handleSubmit=async(e)=>{
        e.preventDefault();
-       let api=`${BackendURL}/doctor/patientInfo`
+       let api=`${BackendUrl}/doctor/patientInfo`
        try {
         const res=await axios.post(api,{id:id,...input});
         console.log(res.data)
