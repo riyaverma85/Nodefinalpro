@@ -139,30 +139,7 @@
 
 
 /*======================================================HOME CARD==============================================================*/
-#card{
-    margin-top: 30px;
-    width: 270px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    border: none;
-    background-color:whitesmoke;
-    transition: transform 0.3s ease;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-.cartbtn{
-  background: #0077b6;
-  color: rgb(5, 5, 5);
-}
- .cartbtn:hover{
-  background: #023e8a;
-  color: aliceblue;
-}
-#card:hover {
-  transform: perspective(600px) translateZ(20px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+
 /*===================================================LAYOUT===================================================================================*/
 .outletdiv{
     margin: 20px;
@@ -585,19 +562,23 @@ body {
     font-size: 0.9rem;
   }
 
-   #card{
-    margin-top: 30px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    border: none;
-    background-color:whitesmoke;
-    transition: transform 0.3s ease;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
+  #docList {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  #docList #card {
+    width: 90%;
+  }
+
+  #docList #card .card-title {
+    font-size: 1rem;
+  }
+
+  #docList #card .card-text {
+    font-size: 0.9rem;
+  }
+
 @media (max-width: 768px) {
   .search-section {
     flex-direction: column;
