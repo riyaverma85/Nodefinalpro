@@ -163,16 +163,12 @@
     margin: auto;
 }
 /*=================================================================ABOUT PAGE================================================================*/
-/* About.css */
-
 .about-container {
   padding: 50px 30px;
   font-family: 'Poppins', sans-serif;
   background-color: #f4f9ff;
   color: #2c3e50;
 }
-
-/* Hero Section */
 .about-hero {
   text-align: center;
   margin-bottom: 50px;
@@ -192,8 +188,6 @@
   line-height: 1.7;
   color: #5d6d7e;
 }
-
-/* Features Section */
 .about-features {
   margin-bottom: 60px;
 }
@@ -247,8 +241,6 @@
   font-size: 2.8rem;
   color: #0077cc;
 }
-
-/* Mission Section */
 .about-team {
   text-align: center;
   background: #fff;
@@ -256,7 +248,6 @@
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 119, 204, 0.08);
 }
-
 .about-team h2 {
   font-size: 2rem;
   color: #0077cc;
@@ -572,29 +563,39 @@ body {
 }
 /*====================================================ABOUT PAGE============================================================*/
 
-/* @media (max-width: 450px) {
+@media (max-width: 450px) {
+  .about-container {
+    padding: 30px 15px;
+  }
+
   .about-hero h1 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+  }
+
+  .about-hero p,
+  .about-team p {
+    font-size: 0.95rem;
   }
 
   .about-features h2,
   .about-team h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .feature-box {
     max-width: 100%;
-    padding: 15px;
-  }
-
-  .about-container {
-    padding: 20px 10px;
+    padding: 20px;
   }
 
   .about-icon {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
-} */
+}
 
 /*======================================================SEARCH PAGE===============================================================================*/
   .search-bar {
