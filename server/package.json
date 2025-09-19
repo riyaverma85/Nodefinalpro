@@ -24,7 +24,7 @@
     "call-bind-apply-helpers": "^1.0.2",
     "call-bound": "^1.0.4",
     "classnames": "^2.5.1",
-    "cloudinary": "^2.7.0",
+    "cloudinary": "^1.30.0",
     "clsx": "^2.1.1",
     "combined-stream": "^1.0.8",
     "concat-stream": "^2.0.0",
@@ -146,6 +146,5 @@
     "whatwg-url": "^14.2.0",
     "wrappy": "^1.0.2",
     "xtend": "^4.0.2"
-  },
-  "devDependencies": {}
+  }
 }
