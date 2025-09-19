@@ -42,12 +42,17 @@
   transform: scale(1.05);
 }
 /*================================================================NAVBAR============================================================================*/
+/* TopMenu.css */
+
+/* Navbar container */
 #topmenu {
-  background-color: #0077cc; 
+  background-color: #0077cc; /* Medical Blue */
   padding: 10px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   z-index: 1000;
 }
+
+/* Navbar Brand */
 #head {
   font-size: 1.6rem;
   font-weight: 700;
@@ -55,9 +60,18 @@
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
 }
+
+/* Spacing between brand and nav */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav Links */
 .pages {
   font-size: 1rem;
-  margin-left: 20px;
+  margin-left: 25px;
   color: #ffffff !important;
   font-weight: 500;
   transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -84,6 +98,8 @@
 .pages:hover {
   color: #e0e0e0 !important;
 }
+
+
 
 
 
@@ -275,28 +291,26 @@ form input,
 }
 /*====================================NAVBAR PAGE=====================================================================*/
 
+
 @media (max-width: 768px) {
   #topmenu {
     padding: 8px 10px;
   }
 
   .pages {
-    margin-left: 10px;
+    margin-left: 15px;
     font-size: 0.95rem;
+  }
+
+  .navbar .container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
 @media (max-width: 450px) {
   #head {
     font-size: 1.3rem;
-  }
-
-  .pages {
-    display: block;
-    margin: 10px 0;
-    font-size: 1rem;
-    padding: 5px 0;
-    text-align: left;
   }
 
   .navbar-nav {
@@ -310,6 +324,14 @@ form input,
   .navbar-collapse {
     background-color: #0077cc;
     padding: 10px 15px;
+  }
+
+  .pages {
+    display: block;
+    margin: 8px 0;
+    font-size: 1rem;
+    padding: 5px 0;
+    text-align: left;
   }
 }
 
