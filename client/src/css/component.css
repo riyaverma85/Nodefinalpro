@@ -18,11 +18,10 @@
   background-color: white;
   padding: 15px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  
 }
 
 #heading img {
-  height: 100px;
+  height: 60px;
   border-radius: 50%;
   width: 100px;
 }
@@ -42,57 +41,69 @@
   transform: scale(1.05);
 }
 /*================================================================NAVBAR============================================================================*/
+/* Navbar absolute positioning */
+/* maan lo header ki height 60px hai */
 #topmenu {
-  background-color: #0055cc;
-  padding: 10px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  z-index: 1000;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Navbar Brand (DOCTRO) */
-#head {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff !important;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 1px;
-  margin-right: auto;  /* Push nav to far right */
-}
-
-/* Nav links styling */
-.pages {
-  font-size: 1rem;
-  margin-left: 35px; 
-  color: #ffffff !important;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* Hover underline effect */
-.pages::after {
-  content: '';
   position: absolute;
-  width: 0%;
-  height: 2px;
-  background: #ffffff;
+  top: 90px;   /* header ke neeche aayega */
   left: 0;
-  bottom: -3px;
-  transition: width 0.3s ease;
-}
-.pages:hover::after {
   width: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.35);
 }
-.pages:hover {
-  color: #e0e0e0 !important;
+
+
+/* Brand / logo styling */
+#head {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 1px;
 }
+
+/* Nav links */
+#topmenu .pages {
+  color: #fff !important;
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+#topmenu .pages:hover {
+  color: #f8d210 !important; /* golden hover */
+  text-decoration: underline;
+}
+
+/* Responsive for small devices */
+@media (max-width: 768px) {
+  #topmenu {
+    background: rgba(0, 0, 0, 0.6); /* darker for readability */
+  }
+
+  /* collapsed menu styling */
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+
+  #topmenu .pages {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  #head {
+    font-size: 1.3rem;
+  }
+  #topmenu .pages {
+    font-size: 0.9rem;
+  }
+}
+
 /* ============================================ Modal Styles========================================================= ===== */
 .modal-content {
   width: 450px;
