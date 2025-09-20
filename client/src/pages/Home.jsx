@@ -53,7 +53,7 @@ const Home=()=>{
       <>
       {/*=======================================CARD SECTION======================================================*/}
       <Card id="card">
-      <Card.Img variant="top" src={item.image} height="250" />
+      <Card.Img variant="top" src={item.image} height="200" />
       <Card.Body>
         <Card.Title><span className='span'>Dr.:{item.doctorname}</span> </Card.Title>
         <Card.Text>
