@@ -1,4 +1,4 @@
-//import docimg from "../images/doctor.jpeg";
+
 import mainheading from "../images/logo.png";
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
@@ -8,6 +8,7 @@ import {ToastContainer,toast} from "react-toastify"
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css"
 import {useNavigate} from "react-router-dom"
+
 const Header=()=>{
   //====================================================REGITRATION MODAL===========================================================================
     const [input, setInput] = useState({});
@@ -175,10 +176,7 @@ const Header=()=>{
         </Modal.Footer>
       </Modal>
 
-
-
-
-      <ToastContainer/>
+<ToastContainer/>
         </>
     )
 }

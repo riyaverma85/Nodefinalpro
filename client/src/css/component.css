@@ -41,8 +41,6 @@
   transform: scale(1.05);
 }
 /*================================================================NAVBAR============================================================================*/
-/* Navbar absolute positioning */
-/* maan lo header ki height 60px hai */
 #topmenu {
   position: absolute;
   top: 90px;   /* header ke neeche aayega */
@@ -74,9 +72,6 @@
   color: #f8d210 !important; /* golden hover */
   text-decoration: underline;
 }
-
-
-
 /* ============================================ Modal Styles========================================================= ===== */
 .modal-content {
   width: 450px;
