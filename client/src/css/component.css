@@ -75,34 +75,7 @@
   text-decoration: underline;
 }
 
-/* Responsive for small devices */
-@media (max-width: 768px) {
-  #topmenu {
-    background: rgba(0, 0, 0, 0.6); /* darker for readability */
-  }
 
-  /* collapsed menu styling */
-  .navbar-collapse {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-  }
-
-  #topmenu .pages {
-    display: block;
-    margin: 0.5rem 0;
-    text-align: center;
-  }
-}
-
-@media (max-width: 450px) {
-  #head {
-    font-size: 1.3rem;
-  }
-  #topmenu .pages {
-    font-size: 0.9rem;
-  }
-}
 
 /* ============================================ Modal Styles========================================================= ===== */
 .modal-content {
@@ -328,44 +301,34 @@ form input,
   }
 }
 /*====================================NAVBAR PAGE=====================================================================*/
+/* Responsive for small devices */
 @media (max-width: 768px) {
   #topmenu {
-    padding: 8px 10px;
+    background: rgba(0, 0, 0, 0.6); /* darker for readability */
   }
 
-  .pages {
-    margin-left: 20px;
-    font-size: 0.95rem;
+  /* collapsed menu styling */
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+
+  #topmenu .pages {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
   }
 }
 
 @media (max-width: 450px) {
   #head {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
-
-  .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 10px;
-    border-top: 1px solid #ffffff33;
-  }
-
-  .navbar-collapse {
-    background-color: #0077cc;
-    padding: 10px 15px;
-  }
-
-  .pages {
-    display: block;
-    margin: 8px 0;
-    font-size: 1rem;
-    padding: 5px 0;
-    text-align: left;
+  #topmenu .pages {
+    font-size: 0.9rem;
   }
 }
-
 
 /*=========================================FOOTER====================================================================================*/
 @media (max-width: 768px) {

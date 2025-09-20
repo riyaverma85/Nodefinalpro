@@ -87,6 +87,38 @@
     }
     
 /*========================================================HOME=======================================================================*/
+/* ===========================firct Hero carousel image==================================================== */
+#heroCarousel .hero-img {
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #heroCarousel .hero-img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 450px) {
+  #heroCarousel .hero-img {
+    height: 220px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section .text {
+    margin-bottom: 1rem;
+  }
+
+  .hero-section img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /* ===================== ICON SECTION ===================== */
 #icon {
   display: flex;
