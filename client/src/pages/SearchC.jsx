@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
  import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import { useState } from "react";
-import BackendUrl from "../util/backendUrl";
+import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 const SearchCity=()=>{
     const[mydata,setMydata]=useState([])

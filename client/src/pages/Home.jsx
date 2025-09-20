@@ -9,7 +9,7 @@ import ban3 from "../images/syrup.avif";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState,useRef } from 'react';
-import BackendUrl from "../util/backendUrl";
+import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 import {useNavigate} from "react-router-dom"
 import img1 from "../images/banner.webp"

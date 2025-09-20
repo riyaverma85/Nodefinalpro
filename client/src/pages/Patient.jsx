@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BackendUrl from "../util/backendUrl";
+import BackendUrl from "../util/BackendUrl";
 import axios from "axios";
 import { useEffect } from "react";
 import Table from 'react-bootstrap/Table';
