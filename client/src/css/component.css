@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+   background: linear-gradient(180deg, #0b2447, #062539);
   padding: 15px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -42,35 +42,46 @@
 }
 /*================================================================NAVBAR============================================================================*/
 #topmenu {
-  position: absolute;
-  top: 90px;   /* header ke neeche aayega */
+  
   left: 0;
   width: 100%;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.35);
+  background: white;
 }
-
-
-/* Brand / logo styling */
 #head {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #fff !important;
+  color: #0c0c0c !important;
   letter-spacing: 1px;
+  font-family: cursive;
+  font-style: italic;
 }
 
 /* Nav links */
 #topmenu .pages {
-  color: #fff !important;
+  color: #060606 !important;
   margin-left: 1rem;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: bold;
+  position: relative;   /* important for ::after positioning */
   transition: color 0.2s ease;
 }
 
-#topmenu .pages:hover {
-  color: #f8d210 !important; /* golden hover */
-  text-decoration: underline;
+/* After pseudo-element */
+#topmenu .pages::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;          /* text ke thoda niche */
+  width: 0%;
+  height: 2px;
+  background-color: #080808;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
+#topmenu .pages:hover::after {
+  width: 100%;
 }
 /* ============================================ Modal Styles========================================================= ===== */
 .modal-content {

@@ -70,7 +70,7 @@ const Home = () => {
 
   return (
     <>
-      {/* ✅ NEW TOP CAROUSEL */}
+      {/*  NEW TOP CAROUSEL */}
       <Carousel id="heroCarousel">
         <Carousel.Item>
           <img src={ban4} alt="banner1" className="d-block w-100 hero-img" />
