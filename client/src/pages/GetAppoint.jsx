@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useParams, useNavigate } from 'react-router-dom'; 
-import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 
@@ -23,7 +22,7 @@ const GetAppoint = () => {
         }
 
         const getData = async () => {
-            let api = `${BackendUrl}/doctor/doctorInfo/?id=${id}`;
+            let api = `${import.meta.env.VITE_API_URL}/doctor/doctorInfo/?id=${id}`;
             try {
                 const res = await axios.get(api);
                 console.log(res.data);
@@ -45,7 +44,7 @@ const GetAppoint = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let api = `${BackendUrl}/doctor/patientInfo`;
+        let api = `${import.meta.env.VITE_API_URL}/doctor/patientInfo`;
         try {
             const res = await axios.post(api, { id: id, ...input });
             console.log(res.data);

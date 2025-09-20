@@ -1,7 +1,6 @@
 
 import Table from 'react-bootstrap/Table';
 import { useState } from "react";
-import BackendUrl from "../util/BackendUrl";
 import axios from 'axios';
 import img2 from "../images/banner2.avif";
 
@@ -11,7 +10,7 @@ const Search = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let api = `${BackendUrl}/doctor/search`; // 👈 new common route
+    let api = `${import.meta.env.VITE_API_URL}/doctor/search`; // 👈 new common route
     const res = await axios.post(api, { query });
     console.log(res.data);
     setMydata(res.data);
